@@ -5,7 +5,7 @@ import { Trends } from "./components/trends/Trends"
 function App() {
 
   return (
-    <main className="py-3 bg-slate-900 text-sm">
+    <main className="py-3 bg-slate-900 text-sm max-lg:py-4 px-4">
       <div className="w-full max-w-360 mx-auto grid gap-8">
         <Navbar/>
         <Header/>
