@@ -26,17 +26,17 @@ export const Trends = () => {
   ];
 
   return (
-    <div className="grid grid-cols-5 text-slate-50 gap-6">
+    < div className="grid lg:grid-cols-5 max-lg:overflow-x-auto max-lg:grid-flow-col max-lg:auto-cols-[268px] text-slate-50 gap-6 ">
       <div className="h-80 bg-purple-600 text-2xl font-bold p-6 flex flex-col gap-5 rounded-lg">
         <Flame className="w-12 h-12" />
         <p className="wrap-break-word">Cargaisons chaudes</p>
       </div>
       {trends.map((trend, index) => (
         <TrendsCards
-          key={index}
-          img={trend.img}
-          title={trend.title}
-          link={trend.link}
+        key={index}
+        img={trend.img}
+        title={trend.title}
+        link={trend.link}
         />
       ))}
     </div>
