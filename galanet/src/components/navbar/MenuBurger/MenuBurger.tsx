@@ -11,7 +11,7 @@ const MenuBurger = () => {
     }
 
     return (
-        <div className="w-fit">
+        <div>
             <Button icon={<Menu/>} onClick={handleClick}/>
             {
                 openBurgerMenu && <MenuModal/>
