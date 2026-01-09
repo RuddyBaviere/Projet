@@ -8,7 +8,7 @@ export const SearchBar = () => {
                 <Telescope className='w-5'/>
             </div>
             <input type="text" placeholder="Fouiller dans les archives des contrebandiers" className="w-full outline-none placeholder:text-slate-50"/>
-            <div className='w-10 h-9 flex items-center justify-center bg-purple-600 rounded-lg'>
+            <div className='w-10 h-9 flex items-center justify-center bg-purple-600 rounded-lg max-md:hidden'>
                 <ArrowBigRight className='w-5'/>
             </div>
         </div>

@@ -27,7 +27,7 @@ export const Trends = () => {
 
   return (
     < div className="grid lg:grid-cols-5 max-lg:overflow-x-auto max-lg:grid-flow-col max-lg:auto-cols-[268px] text-slate-50 gap-6 ">
-      <div className="h-80 bg-purple-600 text-2xl font-bold p-6 flex flex-col gap-5 rounded-lg">
+      <div className="h-80 bg-purple-600 text-2xl font-bold p-6 flex flex-col gap-5 rounded-lg max-md:hidden">
         <Flame className="w-12 h-12" />
         <p className="wrap-break-word">Cargaisons chaudes</p>
       </div>
