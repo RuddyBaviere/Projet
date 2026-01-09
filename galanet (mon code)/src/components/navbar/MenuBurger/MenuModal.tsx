@@ -4,8 +4,8 @@ import { MainNav } from "../MainNav";
 
 const MenuModal = () => {
   return (
-    <div className="flex flex-col gap-10 bg-slate-900 w-full h-full absolute right-0 z-50 p-4">
-      <div className="grid gap-3 my-10">
+    <div className="flex flex-col gap-10 bg-slate-900 w-full min-h-screen absolute right-0 z-50 p-4 pt-12 text-base">
+      <div className="grid gap-3">
         <Button
           menuBurger
           href

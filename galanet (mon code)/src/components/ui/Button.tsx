@@ -1,32 +1,43 @@
-import type { ReactNode } from "react"
+import type { ReactNode } from "react";
 
 interface Props {
-    link? : boolean,
-    text? : string,
-    icon? : ReactNode,
-    href? : string,
+  outline?: boolean;
+  icon?: ReactNode;
+  text?: string;
+  link?: string;
+  href?: boolean;
+  onClick?: () => void;
+  menuBurger?: boolean;
 }
 
-const Button = ({link, text, icon, href} : Props) => {
-    return(
-        <>
-            {
-                link ?
-                    href? 
-                    <a href={href} className='bg-purple-600  text-slate-200 flex items-center gap-4 px-6 py-3 rounded-lg w-fit text-sm'>
-                        {icon} {text}
-                    </a>
-                    :
-                    <button className='bg-purple-600 text-slate-200 flex items-center gap-4 p-4 rounded-lg w-fit cursor-pointer text-sm'>
-                        {icon}
-                    </button>
-                :
-                <button className="w-9 h-9 rounded-lg flex items-center justify-center bg-purple-600 cursor-pointer text-slate-200 text-sm">
-                    {icon}
-                </button>
-            }
-        </>
-    )
-}
+export const Button = ({
+  outline,
+  icon,
+  text,
+  link,
+  href,
+  onClick,
+  menuBurger,
+}: Props) => {
+  return (
+    <>
+      {href ? (
 
-export default Button
+          <a
+            href={link}
+            className={`flex items-center place-content-center gap-2 py-4 px-5 text-slate-50 rounded-lg ${
+              outline ? "border border-slate-50" : "bg-purple-600"
+            } ${menuBurger ? "w-full" : "w-fit"}`}
+          >
+            {icon}
+            {text}
+          </a>
+
+      ) : (
+        <button className="text-white" onClick={onClick}>
+          {icon}
+        </button>
+      )}
+    </>
+  );
+};

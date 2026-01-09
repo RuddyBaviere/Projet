@@ -1,17 +1,18 @@
-import { Header } from "./components/Header";
-import { SectionImg } from "./components/LinksImage/SectionImg";
-import { Navbar } from "./components/Navbar";
+import { Header } from "./components/header/Header"
+import { Navbar } from "./components/navbar/Navbar"
+import { Trends } from "./components/trends/Trends"
 
 function App() {
+
   return (
-    <main className="py-3 bg-slate-900">
+    <main className="py-3 bg-slate-900 text-sm max-lg:py-4 px-4">
       <div className="w-full max-w-360 mx-auto grid gap-8">
-        <Navbar />
+        <Navbar/>
         <Header/>
-        <SectionImg/>
+        <Trends/>
       </div>
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
