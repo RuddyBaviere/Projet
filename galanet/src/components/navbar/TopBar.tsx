@@ -4,6 +4,7 @@ import Logo from "../ui/Logo"
 import { SearchBar } from "../ui/SearchBar"
 import { DiamondPlus, Menu, X } from 'lucide-react';
 import { ModalBurgerMenu } from "./ModalBurgerMenu";
+import { Link } from "react-router";
 
 export const TopBar = () => {
 
@@ -14,28 +15,28 @@ export const TopBar = () => {
             <div className="py-3">
                 {/* Layout desktop grand écran */}
                 <div className="hidden xl:flex items-center gap-12">
-                    <a href="/">
+                    <Link to="/">
                         <Logo />
-                    </a>
+                    </Link>
                     <div className="flex-1">
                         <SearchBar/>
                     </div>
                     <div className="flex items-center gap-5">
-                        <Button outline text="Établir la liaison" link="/"/>
+                        <Button outline text="Établir la liaison" link="/login"/>
                         <Button icon={<DiamondPlus/>} text="Vider sa soute" link="/"/>
                     </div>
                 </div>
 
                 {/* Layout tablette/petit desktop */}
                 <div className="hidden lg:flex xl:hidden items-center gap-6">
-                    <a href="/">
+                    <Link to="/">
                         <Logo />
-                    </a>
+                    </Link>
                     <div className="flex-1">
                         <SearchBar/>
                     </div>
                     <div className="flex items-center gap-3">
-                        <Button outline text="Établir la liaison" link="/"/>
+                        <Button outline text="Établir la liaison" link="/login"/>
                         <Button icon={<DiamondPlus/>} text="Vider sa soute" link="/"/>
                     </div>
                 </div>
@@ -43,9 +44,9 @@ export const TopBar = () => {
                 {/* Layout tablette/mobile */}
                 <div className="lg:hidden space-y-5">
                     <div className="flex items-center justify-between relative">
-                        <a href="/" className="z-50 relative">
+                        <Link to="/" className="z-50 relative">
                             <Logo />
-                        </a>
+                        </Link>
                         <div className="hidden md:flex items-center gap-5">
                             <Button outline text="Établir la liaison" link="/"/>
                             <Button icon={<DiamondPlus/>} text="Vider sa soute" link="/"/>

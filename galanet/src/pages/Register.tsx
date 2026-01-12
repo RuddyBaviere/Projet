@@ -3,11 +3,12 @@ import { Formulaire } from "../components/form/Formulaire";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
 import Logo from "../components/ui/Logo";
+import { Link } from "react-router";
 
 export const Register = () => {
   return (
-    <main className="py-3 px-3 md:px-5 bg-slate-900 text-sm">
-        <div className="w-full max-w-360 mx-auto grid gap-8">
+    <main className="py-3 px-3 md:px-5 bg-slate-900 text-sm h-screen">
+        <div className="w-full max-w-360 mx-auto grid gap-8 py-6">
         <Logo/>
         <div className="flex justify-center items-center">
         <Formulaire>
@@ -30,8 +31,8 @@ export const Register = () => {
             <Input icon={<ScanEye />} mdpLost/>
             </div>
           </div>
-          <Button fullWidth text = "Générer l'identifiant" className="flex justify-center cursor-pointer"/>
-          <p className="text-xs">Vous avez un compte ? <a href="" className="font-bold text-xs">Connexion</a></p>
+          <Button link="" fullWidth text = "Générer l'identifiant" className="flex justify-center cursor-pointer"/>
+          <p className="text-xs">Vous avez un compte ? <Link to="/login" className="font-bold text-xs">Connexion</Link></p>
         </Formulaire> 
         </div>
         </div>
