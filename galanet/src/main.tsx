@@ -7,6 +7,7 @@ import { RouterProvider } from "react-router/dom";
 import { LoginUser } from "./pages/Login.tsx";
 import Layout from "./Layout.tsx";
 import { Register } from "./pages/Register.tsx";
+import ErrorNotFound from "./pages/ErrorNotFound.tsx";
 const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register/>
+  },
+  {
+    path: "/error404",
+    element:<ErrorNotFound/>
   }
 ]);
 
