@@ -22,13 +22,13 @@ export const TopBar = () => {
                         <SearchBar/>
                     </div>
                     <div className="flex items-center gap-5">
-                        <Button outline text="Établir la liaison" link="/login"/>
-                        <Button icon={<DiamondPlus/>} text="Vider sa soute" link="/"/>
+                        <Button outline text="Établir la liaison" to="/login"/>
+                        <Button icon={<DiamondPlus/>} text="Vider sa soute" to="/"/>
                     </div>
                 </div>
 
                 {/* Layout tablette/petit desktop */}
-                <div className="hidden lg:flex xl:hidden items-center gap-6">
+                <div className="hidden lg:flex xl:hidden items-start gap-6">
                     <Link to="/">
                         <Logo />
                     </Link>
@@ -36,8 +36,7 @@ export const TopBar = () => {
                         <SearchBar/>
                     </div>
                     <div className="flex items-center gap-3">
-                        <Button outline text="Établir la liaison" link="/login"/>
-                        <Button icon={<DiamondPlus/>} text="Vider sa soute" link="/"/>
+                        <Button outline text="Établir la liaison" to="/"/>
                     </div>
                 </div>
 
@@ -48,8 +47,8 @@ export const TopBar = () => {
                             <Logo />
                         </Link>
                         <div className="hidden md:flex items-center gap-5">
-                            <Button outline text="Établir la liaison" link="/"/>
-                            <Button icon={<DiamondPlus/>} text="Vider sa soute" link="/"/>
+                            <Button outline text="Établir la liaison" to="/"/>
+                            <Button icon={<DiamondPlus/>} text="Vider sa soute" to="/"/>
                         </div>
                         <button
                             onClick={() => setOpenBurgerMenu(!openBurgerMenu)}

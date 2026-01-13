@@ -1,38 +1,11 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
-import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router/dom";
-import { LoginUser } from "./pages/Login.tsx";
-import Layout from "./Layout.tsx";
-import { Register } from "./pages/Register.tsx";
-import ErrorNotFound from "./pages/ErrorNotFound.tsx";
-const router = createBrowserRouter([
-  {
-    element: <Layout />,
-    children: [],
-  },
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/login",
-    element: <LoginUser />,
-  },
-  {
-    path: "/register",
-    element: <Register/>
-  },
-  {
-    path: "/error404",
-    element:<ErrorNotFound/>
-  }
-]);
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import { RouterProvider } from "react-router"
+import { Router } from './data/Router.tsx'
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
-);
+    <RouterProvider router={Router}/>
+  </StrictMode>,
+)
