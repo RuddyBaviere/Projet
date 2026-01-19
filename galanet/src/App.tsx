@@ -1,5 +1,5 @@
+import { Articles } from "./components/articles/Articles"
 import { Header } from "./components/header/Header"
-import { Shop } from "./components/shop/Shop"
 import { Trends } from "./components/trends/Trends"
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <Header/>
       <Trends/>
-      <Shop/>
+      <Articles/>
     </>
   )
 }
